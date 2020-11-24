@@ -1,0 +1,24 @@
+{
+  "name": "zh-translate",
+  "version": "0.1.1",
+  "description": "zh-translate",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://github.com/*/board*"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+  },
+  "browser_action": {
+    "default_title": "zh-translate"
+  }
+}
