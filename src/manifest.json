@@ -9,7 +9,8 @@
         "scripts/content.js"
       ],
       "matches": [
-        "https://github.com/*/board*"
+        "https://github.com/*",
+        "https://app.zenhub.com/*"
       ]
     }
   ],
