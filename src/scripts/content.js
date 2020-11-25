@@ -36,7 +36,7 @@ function handleDomChange(e)
 	{
 		parseNode(targetNode);
 		parsing = false;
-
+		// console.log('OK');
 	}, 300);
 
 	}
@@ -70,8 +70,18 @@ function parseNode(node)
 		parseNode(item);
 	})
 
+	if (node.nodeName != "#text")
+		{
+		return;
+		}
 
-	console.log(node.type, node.nodeName, node);
+	if (node.nodeValue == "Issues")
+		{
+		console.log('Задачи');
+		node.nodeValue = 'Задачи'
+		}
 
+	// console.log(typeof node.nodeName, node.nodeName, node, typeof node.nodeValue, node.nodeValue);
+	return;
 	}
 
