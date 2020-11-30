@@ -1,25 +1,28 @@
 {
-  "name": "zh-translate",
-  "version": "0.1.1",
-  "description": "zh-translate",
-  "manifest_version": 2,
-  "content_scripts": [
-    {
-      "js": [
-        "scripts/content.js"
-      ],
-      "matches": [
-        "https://github.com/*",
-        "https://app.zenhub.com/*"
-      ]
+    "name": "zh-translate",
+    "version": "0.1.1",
+    "description": "zh-translate",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "scripts/func.js",
+            "scripts/background.js"
+        ]
+    },
+    "content_scripts": [{
+        "js": [
+            "scripts/content.js"
+        ],
+        "matches": [
+            "https://github.com/*",
+            "https://app.zenhub.com/*"
+        ]
+    }],
+    "permissions": [
+        "storage"
+    ],
+    "icons": {},
+    "browser_action": {
+        "default_title": "zh-translate"
     }
-  ],
-  "permissions": [
-    "storage"
-  ],
-  "icons": {
-  },
-  "browser_action": {
-    "default_title": "zh-translate"
-  }
 }
